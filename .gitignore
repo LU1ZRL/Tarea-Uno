@@ -1,0 +1,49 @@
+# Archivos temporales de LaTeX
+*.aux
+*.bbl
+*.blg
+*.brf
+*.fls
+*.fdb_latexmk
+*.idx
+*.ilg
+*.ind
+*.lof
+*.lot
+*.nav
+*.out
+*.snm
+*.synctex.gz
+*.toc
+*.vrb
+*.xdv
+
+# Archivos generados por editores
+*.log
+*.synctex
+*.synctex(busy)
+*.tmp
+*.bak
+*.backup
+*.swp
+*.swo
+
+# Archivos de compilación de PDFLaTeX
+*.dvi
+*.ps
+*.fdb_latex
+
+# Archivos específicos de herramientas de compilación
+*.glg
+*.glo
+*.gls
+*.ist
+*.acn
+*.acr
+*.alg
+*.glsdefs
+*.xdy
+
+# Directorios de compilación
+_build/
+latex.out/
