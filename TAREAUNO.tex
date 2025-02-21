@@ -94,14 +94,11 @@ Un bloque con un peso de 100 N está suspendido por cables A y B, como se muestr
 
 \begin{figure}[h]
     \centering
-    \includegraphics[width=0.2\textwidth]{imagenes/Figure_Ex-55.png}
-    \hspace{5cm}
     \includegraphics[width=0.2\textwidth]{imagenes/Figure_Ex-56.png}
 \end{figure}
 
 
 % ---- 03. Ejercicio 58 IHEBEL ---- %
-\section{Ejercicio 58, Sección 11.2}
 \section{Ejercicio 58, Sección 11.2}
 Un vector $w$ es una combinacón lineal de los vectores $v_1$, $v_2$ y $v_3$, si $w$ puede ser expresado como una $w=c_1v_1+c_2v_2+c_3v_3$ donde $c_1$, $c_2$ y $c_3$  son escalares.\\
 \textbf{a) Encuentra los escalares $c_1$, $c_2$ y $c_3$ para expresar $<-1,1,5>$ como una combinacion lineal de $v_1=<1,0,1>$, $v_2=<3,2,0>$ y $v_3=<0,1,1>$ .}\\\
@@ -202,10 +199,79 @@ La figura adjunta muestra un cubo.
 
 \begin{figure}[h]
     \centering
-    \includegraphics[width=0.2\textwidth]{imagenes/Figure_Ex-18.png}
-    \hspace{5cm}
     \includegraphics[width=0.2\textwidth]{imagenes/Figure_Ex-19.png}
 \end{figure}
+
+\subsection*{Ángulo entre los vectores \( d \) y \( u \)}
+
+Como primer paso identificamos los vectores.
+Observando la Figura Ex-19, identifico:
+\begin{itemize}
+    \item Vector \( u = (0,1,0) \) (va desde el origen hasta la esquina sobre el eje \( y \))
+    \item Vector \( d = (1,1,1) \) (va desde el origen hasta la esquina diagonal opuesta del cubo)
+\end{itemize}
+
+Enseguida nos vamos a calcular el producto escalar. 
+Para calcular el ángulo \( \theta \) entre dos vectores, uso la fórmula:
+\begin{equation*}
+\cos(\theta) = \frac{u \cdot d}{|u| \cdot |d|}
+\end{equation*}
+
+Donde:
+\begin{equation*}
+u \cdot d = (0 (1)) + (1(1)) + (0(1)) = 1
+\end{equation*}
+\begin{equation*}
+|u| = \sqrt{0^2 + 1^2 + 0^2} = 1
+\end{equation*}
+\begin{equation*}
+|d| = \sqrt{1^2 + 1^2 + 1^2} = \sqrt{3}
+\end{equation*}
+
+Ahora será calcular el ángulo:\\
+\begin{equation*}
+\cos(\theta) = \frac{1}{1 (\sqrt{3})} = \frac{1}{\sqrt{3}} = 0.577
+\end{equation*}
+\begin{equation*}
+\theta = \arccos\left(\frac{1}{\sqrt{3}}\right) = 54.7^\circ
+\end{equation*}
+
+Por lo tanto, el ángulo entre los vectores \( d \) y \( u \) es exactamente \( \arccos(1/\sqrt{3}) \), que nos da \( 54.7^\circ \).
+
+\subsection*{Conjetura sobre el ángulo entre los vectores \( d \) y \( v \)}
+
+Nuevamente identificamos el vector \( v \) que
+según la figura, el vector \( v = (1,0,1) \) (va desde el origen hasta la esquina superior en diagonal).
+
+\subsection*{» Formular conjetura}
+Analizando el cubo, podría conjeturar que el ángulo entre \( d \) y \( v \) sería diferente al ángulo entre \( d \) y \( u \), porque:
+\begin{itemize}
+    \item El vector \( u \) está alineado con un eje (\( y \)).
+    \item El vector \( v \) es una diagonal de cara (plano \( xz \)).
+    \item El vector \( d \) es una diagonal principal del cubo.
+\end{itemize}
+
+Mi conjetura es que el ángulo será menor que \( 54.7^\circ \). 
+Calculemos el ángulo entre \( d \) y \( v \):
+
+\begin{equation*}
+d \cdot v = (1(1)) + (1(0)) + (1(1)) = 2
+\end{equation*}
+\begin{equation*}
+|v| = \sqrt{1^2 + 0^2 + 1^2} = \sqrt{2}
+\end{equation*}
+\begin{equation*}
+|d| = \sqrt{3}
+\end{equation*}
+\begin{equation*}
+\cos(\theta) = \frac{2}{\sqrt{3} (\sqrt{2})} = \frac{2}{\sqrt{6}} = \frac{2\sqrt{6}}{6} = 0.816
+\end{equation*}
+\begin{equation*}
+\theta = \arccos\left(\frac{2}{\sqrt{6}}\right) = 35.3^\circ
+\end{equation*}
+\\
+Por lo tanto, el ángulo entre los vectores \( d \) y \( v \) es exactamente \( \arccos(2/\sqrt{6}) \) es  \( 35.3^\circ \).
+
 
 
 % ---- 05. Ejercicio 34 IHEBEL ---- %
@@ -262,6 +328,45 @@ Para el niño del Ejercicio 34, estime cuánta fuerza debe aplicarse en la direc
 
 Suponga que el tobogán en el Ejercicio 34 tiene 4 m de largo. Estime el trabajo realizado por la gravedad si el niño se desliza desde la parte superior del tobogán hasta la parte inferior.
 
+\begin{itemize}
+    \item Masa del niño: \( m = 34 \) kg
+    \item Ángulo de inclinación del tobogán: \( \theta = 27^\circ \)
+    \item Longitud del tobogán: \( L = 4 \) m
+    \item Aceleración gravitatoria: \( g = 9.8 \) m/s²
+\end{itemize}
+
+El peso del niño (\( mg \)) actúa verticalmente hacia abajo. Para calcular el trabajo, determinaremos la componente de esta fuerza en la dirección del desplazamiento, a lo largo del tobogán.
+\\
+Calculamos la componente del peso paralela al tobogán, está es la que realiza el trabajo:
+\\
+\begin{equation*}
+F_{\parallel} = mg \sin(\theta)
+\end{equation*}
+\begin{equation*}
+F_{\parallel} = (34)  (9.8)  (\sin(27^\circ))
+\end{equation*}
+\begin{equation*}
+F_{\parallel} = (34)  (9.8)  (0.4539) = 151.26 \text{ N}
+\end{equation*}
+\\
+El desplazamiento es igual a la longitud del tobogán:
+\begin{equation*}
+d = 4 \text{ m}
+\end{equation*}
+\\
+Ahora el trabajo lo calculamos como el producto de la fuerza paralela por el desplazamiento:
+\\
+\begin{equation*}
+W = F_{\parallel} \cdot d
+\end{equation*}
+\begin{equation*}
+W = (mg \sin(\theta)) \cdot d
+\end{equation*}
+\begin{equation*}
+W = 151.26 ( 4) = 605.07 \text{ J}
+\end{equation*}
+\\
+Por lo tanto, el trabajo realizado por la gravedad cuando el niño se desliza por el tobogán de 4 metros es de 605.07J.
 
 \subparagraph{Ejercicios: Sección 11.4 Anton-Bivens-Davis (pp. 803-805).}
 
@@ -338,6 +443,11 @@ Teniendo las formulas $cos\theta=\frac{\hat{v}}{||\overrightarrow{v}||}$
 
 % ---- 09. Ejercicio 41 DANJIRO ---- %
 \section{Ejercicio 41, Sección 11.4}
+Como se muestra en la siguiente imagen,un fuerza de 200N es aplicada a un ángulo de 18\degree a un punto cerca del borde de una llave inglesa. Encuentra el momento escalar de la fuerza en base al centro del tornillo:
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.5\textwidth]{imagenes/Figure_Ex-41.png}
+\end{figure}
 
 \begin{itemize}
     
