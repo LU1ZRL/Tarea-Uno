@@ -102,6 +102,92 @@ Un bloque con un peso de 100 N está suspendido por cables A y B, como se muestr
 
 % ---- 03. Ejercicio 58 IHEBEL ---- %
 \section{Ejercicio 58, Sección 11.2}
+\section{Ejercicio 58, Sección 11.2}
+Un vector $w$ es una combinacón lineal de los vectores $v_1$, $v_2$ y $v_3$, si $w$ puede ser expresado como una $w=c_1v_1+c_2v_2+c_3v_3$ donde $c_1$, $c_2$ y $c_3$  son escalares.\\
+\textbf{a) Encuentra los escalares $c_1$, $c_2$ y $c_3$ para expresar $<-1,1,5>$ como una combinacion lineal de $v_1=<1,0,1>$, $v_2=<3,2,0>$ y $v_3=<0,1,1>$ .}\\\
+Tenemos entonces lo siguiente:
+\begin{equation*}
+    \begin{split}
+        <-1,1,5> &= c_1<1,0,1> + c_2<3,2,0> + c_3<0,1,1>\\
+        &=<c_1,0,c_1> + <3c_2,2c_2,0> + <0,c_3,c_3>\\
+        &=<c_1+3c_2+0,0+2c_2+c_3,c_1+0+c_3>
+    \end{split}
+\end{equation*}
+
+De aqui podemos ver el siguiente sistema de ecuaciones.
+
+\begin{equation*}
+     \left\{\begin{matrix}
+         c_1 + 3c_2 + 0&= -1 & (1\\
+         0 + 2c_2 + c_3&= 1 & (2\\
+         c_1 + 0 + c_3&= 5  & (3\\
+\end{matrix}\right.
+\end{equation*}
+
+Por sustitucion:
+
+\textit{1)}
+\begin{equation*}
+        c_1=-1-3c_2
+\end{equation*}
+
+\textit{2)}
+\begin{equation*}
+    c_3=1-2c_2
+\end{equation*}
+
+\textit{3)}
+\begin{equation*}
+    \begin{split}
+        -1-3c_2+c_3 &= 5\\
+        -1-3c_2+1-2c_2&=5\\
+        -5c_2 &= 5\\
+        c_2&=-1
+    \end{split}
+\end{equation*}
+\textit{Resolvemos el resto}
+\begin{equation*}
+    \begin{split}
+        c_3 &= 1-2(-1)\\
+        c_3 &= 1+2\\
+        c_3 &=\\ \\
+        c_1 &= -1-3(-1)\\
+        c_1 &= -1+3\\
+        c_1 &= 2
+    \end{split}
+\end{equation*}
+
+Por lo tanto, los escalares son $c_1=2$, $c_2=-1$ y $c_3=3$.
+
+
+\textbf{b) Muestra que el vector $2\hat{i} + \hat{j} - \hat{k}$ no puede ser expresado como una combinacion lineal de $v_1=\hat{i}-\hat{j}$, $v_2=3\hat{i}+\hat{k}$, $v_3=4\hat{i}-\hat{j}+\hat{k}$}
+\begin{equation*}
+    \begin{split}
+        <2,1,-1> &= x<1,-1,0> + y<3,0,1> + z<4,-1,1>\\
+        &= <x,-x,0> + <3y,0,y> + <4z,-z,z>\\
+        &= <x+3y+4z,-x+0-z,0+y+z>
+    \end{split}
+\end{equation*}
+\begin{equation*}
+     \left\{\begin{matrix}
+         x+3y+4z &= 2 & (1\\
+         -x+0-z &= 1 & (2\\
+         0+y+z &= -1  & (3\\
+    \end{matrix}\right.
+\end{equation*}
+
+Observamos rapidamente que si despejamos x de (2) y y de (3) tenemos:
+\begin{equation*}
+    \begin{split}
+        -z-1&=x\\
+        y&=-1-z
+    \end{split}
+\end{equation*}
+
+Que significa que en este sistema $x=y$.
+
+Como dos variables son iguales, tenemos que no hay solucion para el sistema y $\therefore$ el vector $2\hat{i} + \hat{j} - \hat{k}$ no es una combinacion lineal de $v_1$, $v_2$ y $v_3$
+
 
 
 \subparagraph{Ejercicios: Sección 11.3 Anton-Bivens-Davis (pp. 792-794).}
@@ -124,8 +210,24 @@ La figura adjunta muestra un cubo.
 
 % ---- 05. Ejercicio 34 IHEBEL ---- %
 \section{Ejercicio 34, Sección 11.3}
-Como se muestra en la figura adjunta, un niño con masa de 34 kg está sentado en un tobogán de juegos suave (sin fricción) que está inclinado en un ángulo de $27^\circ$ con la horizontal. Estime la fuerza que el niño ejerce sobre el tobogán, y estime cuánta fuerza debe aplicarse en la dirección de $\mathbf{P}$ para evitar que el niño se deslice hacia abajo por el tobogán. Tome la aceleración debida a la gravedad como 9.8 m/s$^2$.
+Como se muestra en la figura adjunta, un niño con masa de 34 kg está sentado en un tobogán de juegos suave (sin fricción) que está inclinado en un ángulo de $27^\circ$ con la horizontal. Estime la fuerza que el niño ejerce sobre el tobogán, y estime cuánta fuerza debe aplicarse en la dirección de $\mathbf{P}$ para evitar que el niño se deslice hacia abajo por el tobogán. Tome la aceleración debida a la gravedad como 9.8 m/s$^2$.\\
 
+
+a)sea la fuerza del niño sobre la resbaladilla, sabemos que existe una fuerza con dirección hacia abajo de magnitud $(9.8)(34)=333.2N$, de ahí como el tobogan tiene un ángulo respecto a la horizontal con 27°, vemos que la fuerza se descompone en 2, una que va en sentido ortogonal al tobogán (llamémosle $F_2$) y otra en sentido paralelo que apunta a la izquierda (llamémosle $F_1$), Dadas estas condiciones:
+\begin{equation*}
+    \begin{split}
+        333.2 &= ||G_1+G_2||\\
+        ||G_1||&=||G||\cos{63\degree}\\
+        &=333.2\cos{\frac{7}{20}\pi}\\
+        &=151.27N\\
+        ||G_2||&=||G||\sin{63\degree}\\
+        &=333.2\sin{\frac{7}{20}\pi}\\
+        &=296.88N
+    \end{split}
+\end{equation*}
+$\therefore$ La fuerza que el niño ejerce sobre la resbaladilla es de 296.88N\\
+
+b) La fuerza que lo mantiene estatico es la isma de $G_1$ pero en sentido contrario
 
 % ---- 06. Ejercicio 35 DANJIRO ---- %
 \section{Ejercicio 35, Sección 11.3}
@@ -165,6 +267,74 @@ Suponga que el tobogán en el Ejercicio 34 tiene 4 m de largo. Estime el trabajo
 
 % ---- 08. Ejercicio 40 IHEBEL ---- %
 \section{Ejercicio 40, Sección 11.4}
+La siguiente figura muestra una fuerza de 1000N aplicada a la esquina de una caja.
+\begin{center}
+    \includegraphics[height=9cm]{imagenes/Ej40.jpg}
+\end{center}
+
+\textbf{a) Encuentra el momento escalar de F sobre P}
+
+Primero, buscamos los vectores que necesitamos
+\begin{equation*}
+    \begin{split}
+        F &= <0-1,2-2,1-0>\\
+        &= <-1,0,1>\\
+        \left\| F \right\| &= \sqrt{1+1} = \sqrt{2}\\
+        \left\| \hat{F} \right\| &= \left< -\frac{1}{\sqrt{2}}, 0, \frac{1}{\sqrt{2}}\right>\\
+        \left\| \overrightarrow{F} \right\| &= \frac{1000}{\sqrt{2}}<-1,0,1>\\
+        \left\| \overrightarrow{F} \right\| &= <1-1,2-0,0-1>\\
+        &=<0,2,-1>.
+    \end{split}
+\end{equation*}
+
+Ahora encontramos el momento escalar sobre P.
+\begin{equation*}
+    \begin{split}
+        (\overrightarrow{PQ} \times \hat{F}) &=\begin{bmatrix}
+            i & j & k \\
+            0 & 2 & -1 \\
+            -1 & 0 & 1 \\
+        \end{bmatrix}\\
+        &=i(2)+j(1)+k(-2)\\
+        &=2i+j-2k
+    \end{split}
+\end{equation*}
+De aqui obtenemos el torque ahora sobre P.
+\begin{equation*}
+    \begin{split}
+        \frac{1000}{\sqrt{2}}\left\| \overrightarrow{PQ} \times \hat{F} \right\| &= \frac{1000}{\sqrt{2}}\sqrt{2^2+1^2+2^2}\\
+        &=\frac{1000}{\sqrt{2}}\sqrt{4+1+4}\\
+        &=\frac{1000}{\sqrt{2}}\sqrt{9}\\
+        &=\frac{3000}{\sqrt{2}}
+    \end{split}
+\end{equation*}
+Por lo tanto, el momento escalar sobre P es de $\frac{3000}{\sqrt{2}}N\cdot m$
+
+
+\textbf{b) Encuentra los ángulo directores del vector momento de F sobre P al ángulo más cercano.}
+
+Teniendo las formulas $cos\theta=\frac{\hat{v}}{||\overrightarrow{v}||}$
+\begin{equation*}
+    \begin{split}
+        \alpha &= \arccos{\frac{2}{3}}\\
+        \alpha &\approx 48\degree
+    \end{split}
+\end{equation*}
+\begin{equation*}
+    \begin{split}
+        \beta &= \arccos{\frac{2}{3}}\\
+        \beta &\approx 70\degree
+    \end{split}
+\end{equation*}
+\begin{equation*}
+    \begin{split}
+        \gamma &= \arccos{\frac{-2}{3}}\\
+        \gamma &\approx -132\degree
+    \end{split}
+\end{equation*}
+
+
+
 
 % ---- 09. Ejercicio 41 DANJIRO ---- %
 \section{Ejercicio 41, Sección 11.4}
