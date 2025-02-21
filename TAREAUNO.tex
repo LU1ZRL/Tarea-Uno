@@ -6,7 +6,8 @@
 \usepackage[left=2cm,right=2cm,top=1.8cm,bottom=2.3cm]{geometry}
 \usepackage{fancyhdr}
 \usepackage{lastpage}
-\usepackage[spanish]{babel}
+\usepackage{gensymb}
+\usepackage{amsmath}
 \pagestyle{fancy}
 \fancyhf{}
 \rfoot{\textit{Página \thepage \hspace{1pt} de \pageref{LastPage}}}
@@ -55,6 +56,32 @@
 
 % ---- 01. Ejercicio 52 DANJIRO ---- %
 \section{Ejercicio 52, Sección 11.2}
+Se dice que una partícula esta en un equilibrio estático si la resultante de todas las fuerzas 
+aplicadas es igual a cero. En estos ejercicios, encientra la furza F que debe ser aplicada al punto para producir un equilibrio estático. Describe F especificando su magnitud y el ángulo que hace respecto al eje positivo de x. 
+Para resolver este ejercicio hice los siguientes pasos:
+\begin{itemize}
+    \item Empecé con etiquetar cada fuerza con un nombre para hacer más eficiente la solución: $F_1 = 120$N, $F_2 = 150$N y $F_3 = 100$N.
+    \item Luego para sacar los vectores de cada fuerza use la longitud y ángulo de cada fuerza, medí los ángulos respecto al eje x positivo:
+    \begin{equation*}
+    F_1 = 135\degree, F_2 = 60\degree, F_3 = 0\degree        
+    \end{equation*}
+    \item Use la siguiente fórmula para cada fuerza y sacar el vector de las 3 fuerzas usando la longitud y el ángulo de estas, resolviendo la fórmula qeudaría así:
+    \begin{center}
+        $F_1 = 120<cos(135), sen(135)> \simeq <-84.8528, 84.8528>$
+        $F_2 = 150<cos(60), sen(60)> \simeq <75, 129.9038>$
+        $F_3 = 100<cos(0), sen(0)> \simeq <100, 0>$
+    
+    \end{center}
+    \item Al ya tener todos los vectores de cadaa fuerza, sumamdos los 3 vectores para obtener las fuerza final de la combinación de las 3 fuerzas:
+    \begin{center}
+        $F_T = (F_1 + F_2 + F_3) = <-84.8528 + 75 + 100, 84.8528 + 129.9038 + 0> \simeq <90.1479, 214.7560>  $ 
+    \end{center}
+    \item Para finalizar, calculamos la fuerza equilibrante en forma de vector al pasar la suma de las fuerzas como negativas y sacamos su norma para medir la fuerza equilibrante:
+    \begin{center}
+        $||F_{eq}|| \sqrt{(-90.1479)^{2} + (-214.7560)^{2}} \simeq 232.9093 $
+    \end{center}
+    \item Y como podemos ver, la fuerza equilibrante que debe tener la partícula es de $232.9093$ para llegar a un equilibrio estático.
+\end{itemize}
 
 % ---- 02. Ejercicio 56 LUIS ---- %
 \section{Ejercicio 56, Sección 11.2}
@@ -111,6 +138,23 @@ Para el niño del Ejercicio 34, estime cuánta fuerza debe aplicarse en la direc
     \includegraphics[width=0.2\textwidth]{imagenes/Figure_Ex-35.png}
 \end{figure}
 
+\begin{itemize}
+
+    \item Para este ejercicio, usaremos 2 datos del punto anterior, los cuales son la fuerza aplicada hacia abajo ($333.2$) y la fuerza en diagonal hacia abajo ($296.8833$) y suando estos datos podemos proyectar un triángulo más pequeño y podemos usar un rectangulo con la fuerza contraria de Q, la cual llamaremos Q', y usando la propiedad de los ángulos usaremos un ángulo de 63\degree, y usando las razones trigonométricas podemos reemplazar los datos de la sigueinte manera:
+    \begin{center}
+        $sen(\theta) = C.O./H \rightarrow sen(63\degree) = Q´/F_1 \rightarrow sen(63\degree) = Q´/296.8833$
+    \end{center}
+    \item Y luego al despejar Q'podemos sacar el vector inverso de Q para sacar su fuerza inversa y pasamos el grado a radianes ($63\degree = 7\pi / 20$):
+    \begin{center}
+        $||Q´|| = 296.8833 sen(7\pi / 20) \simeq 264.5249$
+    \end{center}
+    \item Y para calcular la fuerza Q, simplememte debemos hacer inverso la norma de Q' y esto nos dara la fuerza necesaria que debed tener Q para evitar que el niño se deslice:
+    \begin{center}
+        $Q = -Q' \rightarrow -264.5249$
+    \end{center}
+    
+\end{itemize}
+
 % ---- 07. Ejercicio 36 LUIS ---- %
 \section{Ejercicio 36, Sección 11.3}
 
@@ -124,6 +168,46 @@ Suponga que el tobogán en el Ejercicio 34 tiene 4 m de largo. Estime el trabajo
 
 % ---- 09. Ejercicio 41 DANJIRO ---- %
 \section{Ejercicio 41, Sección 11.4}
+
+\begin{itemize}
+    
+    \item Primero calcule el vector que hay entre el centro del tornillo ($\vec{F_0}$) a el punto aplicado de la fuerza ($\vec{F_1}$) usando la siguiente formula y reemplazando los vectores:
+    \begin{center}
+        $F_0 = (0,0)$ y $F_1 = (200, 30)$
+        
+        $\vec{F_0 F_1} = <200 - 0, 30 - 0>$
+    \end{center}
+    \item Y como la distancia esta en milimetros, debemos transformarlos en metros ya que estamos usando Newtons, por lo cual $\vec{F_0 F_1} = <0.2, 0.03>$
+    \item Y ahora para sacar las coordenadas i y j del vector de $\vec{F}$ usamos la longitud y angulo de este, en este caso usamos esta fórmula y reemplazamos valores:
+    \begin{center}
+        $\vec{F} = \vec{||F||}<cos(\theta), sen(\theta)>$
+        
+        $\downarrow$
+    
+        $\vec{F} = 200<cos(72), sen(72)> = 200<cos(2\pi/5), sen(2\pi/5) \simeq <61.8033 i, 190.2113 j>$ 
+        
+    \end{center}
+    \item Y ya que tenemos el vector $\vec{P_0 P_1}$ y el vector $\vec{F}$ podemos calcular su momento escalar sacando la norma del producto cruz de ambos vectores:
+    \begin{center}
+        $\vec{P_0 P_1} x \vec{F} = $
+        
+        $\begin{Bmatrix}
+            0.2 & .0.03\\
+            61.8033 & 190.2113
+        \end{Bmatrix}$
+        
+    
+        $\downarrow$
+    
+        $<38.0422 - 1.8541> $    
+    \end{center}
+    \item Y para terminar de sacar el momento escalar, sacamos la norma del producto cruz y nos da lo siguiente:
+    \begin{center}
+        $\sqrt{(38.0422)^{2} + (-1.8541)^{2}} = 38.0873 $
+    \end{center}
+\end{itemize}
+
+Y por lo que podemos ver, el momento escalar de la llave inglesa es de $38.0873$ 
 
 % ---- 10. Ejercicio 49 POR SORTEAR ---- %
 \section{Ejercicio 49, Sección 11.4}
